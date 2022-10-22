@@ -20,3 +20,10 @@ class ProductPage(BasePage):
                                                  f'Book price message is {book_price_message} and' \
                                                  f'book price is {book_price}'
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.BOOK_NAME_MESSAGES), \
+            "Success message is presented, but should not be"
+
+    def success_messgae_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.BOOK_NAME_MESSAGES), \
+            'Success message must be disappeared, but it is not'
