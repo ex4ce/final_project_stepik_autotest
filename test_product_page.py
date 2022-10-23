@@ -9,6 +9,7 @@ import faker
                                         pytest.param("7", marks=pytest.mark.xfail), "8", "9"])
 @pytest.mark.need_review
 def test_guest_can_add_product_to_basket(browser,promo_offer):
+    # Если не хотите запускать много тестов - уберите параметризацию
     link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
     page = ProductPage(browser, link)
     page.open()
