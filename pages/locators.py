@@ -27,4 +27,8 @@ class ProductPageLocators():
     BOOK_NAME = (By.CSS_SELECTOR, '.product_main h1')
     BOOK_PRICE_MESSAGE = (By.CSS_SELECTOR, '.alertinner p strong')
     BOOK_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
-    SUCCESS_MESSAGE = (1,2)
+
+class UrlLocators():
+    BASE_LINK = 'http://selenium1py.pythonanywhere.com/'
+    PROD_LINK = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+    PROMO_NEW_YEAR = 'http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/?promo=newYear2019'
